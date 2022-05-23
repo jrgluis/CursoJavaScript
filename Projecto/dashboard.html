@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns:th="www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="https//www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fabrx">
+    <meta name="keywords" content="Fabrx">
+    <meta name="author" content="Fabrx">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Dashboard</title>
+
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Fabrx External CSS -->
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/fabrx-styles.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Fabrx Scripts -->
+    <script src="https://kit.fontawesome.com/6bf73e456d.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <section class="fabrx-sidebar">
+            <div class="row no-gutters">
+                <!--Sidebar -->
+                <div class="col-auto">
+                    <aside class="fabrx-aside fabrx-aside-two">
+                        <div class="bg-gradient-primary" style="height: 60px;">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <i class="fas fa-shopping-cart fa-400px"
+                                        style="padding-left: 25px; padding-top: 12px; font-size: 30px; color: white;">
+                                    </i>
+                                </div>
+                                <div class="col-sm-10">
+                                    <strong class="font-size-30"
+                                        style="margin-left: 20px; font-size: 35px; color: white; font: bolder; border: thick;">Proyecto
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fabrx-aside-header">
+                            <div class="d-flex align-items-center pt-5">
+                                <a href="#0" class="fabrx-avatar fabrx-status dnd md">
+                                    <img src="images/avatars/avatar-1.png" alt="Avatar">
+                                </a>
+                                <div class="pl-2">
+                                    <strong class="d-block text-primary font-size-14 font-weight-medium">Hola,
+                                        usuario</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fabrx-menu-category">
+                            <ul class="list-unstyled menu-category">
+                                <li>
+                                    <ul class="list-unstyled menu-category">
+                                        <li>
+                                            <a href="#0" data-toggle="collapse" data-target="#collapseThree1"
+                                                aria-expanded="false" aria-controls="collapseThree1">
+                                                <span> <i class="fas fa-home"></i>
+                                                    <span class="dropdown-text ml-2">Inicio</span>
+                                                </span>
+                                                <svg data-name="Icon/Arrows/Chevron/Down"
+                                                    xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                    viewBox="0 0 24.091 24">
+                                                    <path data-name="Icon Color"
+                                                        d="M-2.182,24,0,21.818-9.818,12,0,2.182-2.182,0l-12,12Z"
+                                                        transform="translate(0.091 4.909) rotate(-90)" fill="#959393">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            <div id="collapseThree1" class="collapse" data-parent=".accordion1">
+                                                <ul class="list-unstyled menu-category pt-2">
+                                                    <li>
+                                                        <a href="@{/purchase-modules" aria-expanded="false"
+                                                            aria-controls="collapseThree1">
+                                                            <span> <i class="fas fa-box-open"></i> <span
+                                                                    class="dropdown-text ml-0"> Modulos</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@{/purchase-dashboard" aria-expanded="false"
+                                                            aria-controls="collapseThree1">
+                                                            <span>
+                                                                <i class="fas fa-home"></i>
+                                                                <span class="dropdown-text ml-0"> Dashboard</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fabrx-aside-body fabrx-scroll accordion1">
+                            <div class="fabrx-aside-footer">
+                                <a href="/logout" class="font-size-12">
+                                    Sign out
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fabrx-aside-footer">
+                            <img src="images/avatars/avatar-1.png" alt="Avatar">
+                            <a href="#0" style="font-size: 12px; color: gray;">v1.0.0</a>
+                        </div>
+                    </aside>
+                </div>
+                <!-- Contenido -->
+                <div class="col-md p-4 bg-content">
+                    <div class="content-wrapper">
+                    </div>
+                </div>
+                <!-- Fin Contenido -->
+            </div>
+        </section>
+    </div>
+    <footer fragment="footer" class="container">
+        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    </footer>
+</body>
+
+</html>
