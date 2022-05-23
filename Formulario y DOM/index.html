@@ -10,38 +10,26 @@
 </head>
 <body>
     <main>
+        <h2>
+            FORMULARIO Y EL DOM
+        </h2>
         <form id="form">
-            <article>
-                <h2>
-                    FORMULARIO Y EL DOM
-                </h2>
-            </article>
-            <article>
-                <span>
-                    Color del texto
-                </span>
-                <input type="text" name="colorTexto" id="colorTexto"/>
-                <span>
-                    Color del fondo
-                </span>
-                <input type="text" name="colorFondo" id="colorFondo"/>
-            </article>
-            <article>
-                <span>
-                    Tamaño de fuentes
-                </span>
-                <input type="text" name="fuente" id="fuente">
-            </article>
-            <article>
+            <section class="sectionText">
+                <label>Color del texto</label>
+                <label>Color del fondo</label>
+                <label>Tamaño de fuentes</label>
                 <label for="ancho">Ancho</label>
-                <input type="text" name="ancho" id="ancho"/>
                 <label for="alto">Alto</label>
+            </section>
+            <section class="sectionInput">
+                <input type="text" name="colorTexto" id="colorTexto"/>
+                <input type="text" name="colorFondo" id="colorFondo"/>
+                <input type="text" name="fuente" id="fuente">
+                <input type="text" name="ancho" id="ancho"/>
                 <input type="text" name="alto" id="alto"/>
-            </article>
-            <article>
                 <textarea name="text" id="text" cols="30" rows="10"></textarea>
                 <button type="submit">Aplicar</button>
-            </article>
+            </section>
         </form>
         <section class="div">
             <div class="divToChange" id="caja">
