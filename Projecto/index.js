@@ -3,24 +3,19 @@ const app = express()
  
 app.use(express.static('assets'));
 app.use(express.static('node_modules'));
-app.use(express.static('maintenance'));
+app.use(express.static('views'));
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + "/index.html")
+app.get('/login', function(req, res) {
+    res.sendFile(__dirname + "/views/login.html")
 })
-app.get('/dashboard', function(req, res) {
-    res.sendFile(__dirname + "/dashboard.html")
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + "/views/dashboard.html")
 })
 app.get('/user', function(req, res) {
-    res.sendFile(__dirname + "/maintenance/user.html")
+    res.sendFile(__dirname + "/views/maintenance/user.html")
 })
-
-app.get('/view/costumer', function(req, res) {
-    res.sendFile(__dirname + "/views/costumer.html")
-})
-
-app.get('/costumer', function(req, res) {
-    res.sendFile(__dirname + "/maintenance/costumer.html")
+app.get('/customer', function(req, res) {
+    res.sendFile(__dirname + "/views/maintenance/customer.html")
 })
 
 app.listen(3000)

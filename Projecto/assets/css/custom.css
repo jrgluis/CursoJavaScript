@@ -1,75 +1,3 @@
-.edit-table-button {
-	background-color: gray;
-	/*   background-image: linear-gradient(180deg, #bababa 10%, gray 100%); */
-	/*   background-size: cover; */
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.cancel-table-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #F46363 100%, #F46363 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.assign-table-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.save-table-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
 .save-button {
 	background-color: #3063CB;
 	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
@@ -88,61 +16,7 @@
 	border-radius: 5px;
 }
 
-.clear-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
 .edit-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.exit-button {
-	background-color: #3063CB;
-	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
-	background-size: cover;
-	border: none;
-	color: white;
-	padding: 2px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	/*   margin: 4px 2px; */
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.print-button {
 	background-color: #3063CB;
 	background-image: linear-gradient(180deg, #3063CB 10%, #224abe 100%);
 	background-size: cover;
@@ -185,61 +59,8 @@ h5.title {
 	
 }
 
-.title-doc-number {
-	color: #4D91E5;
-	font-size: 30px;
-	margin-left: 0px;
-	margin-bottom: 20px !important;
-}
-
 .center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.ui-autocomplete {
-	max-height: 300px;
-	overflow-y: auto;
-	/* prevent horizontal scrollbar */
-	overflow-x: hidden;
-}
-/* IE 6 doesn't support max-height
-		 * we use height instead, but this forces the menu to always be this tall
-		 */
-* html .ui-autocomplete {
-	height: 300px;
-}
-
-.ui-autocomplete-loading {
-	background:
-		url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/images/ui-anim_basic_16x16.gif)
-		no-repeat right center
-}
-
-#pdfModal>.modal-dialog {
-	max-width: 70%;
-	height: 94%;
-}
-
-#bodyContent, #modalContent {
-	height: 100%;
-}
-
-#contenedor, #externo {
-	width: 100%;
-	height: 100%;
-}
-.conainterPurchase label{
-	font-weight: 700;
-}
-.table .number-align{
-	text-align: right;
-}
-#filterReport, .filterReport{
-	border-color: #5fc1fc; 
-	width: 300px; 
-	margin-right: 3px; 
-	cursor: pointer;
-	margin-left: 10px;
 }

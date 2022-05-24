@@ -1,25 +1,23 @@
 {
 	"users": [{
 		"id":1,
-		"name":"Pinchas",
-		"user_name":"pberrigan0",
-		"password":"fHn1Vi3"
+		"name":"Jorge Mejia",
+		"user_name":"jrgluis",
+		"password":"1234"
 	},
 	{
 		"id": 2,
 		"name": "Chatterbridge martinez",
-		"email": "msemour4@printfriendly.com",
-		"address": "1 Washington Circle",
-		"createdAt":"2022/12/01"
+		"user_name": "msemour4",
+		"password": "1232434"
 	},
 	{
 		"id": 3,
 		"name": "Chatterbridge martinez",
-		"email": "msemour4@printfriendly.com",
-		"address": "1 Washington Circle",
-		"createdAt":"2022/12/01"
+		"user_name": "msemour4",
+		"password": "12323123"
 	}],
-	"costumers": [{
+	"customers": [{
 		"id": 1,
 		"name": "Chatterbridge martinez",
 		"email": "msemour4@printfriendly.com",
