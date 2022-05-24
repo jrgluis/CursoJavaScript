@@ -1,6 +1,4 @@
-const url = "http://localhost:3200/users";
-
-window.addEventListener("load", event=> {
+/*window.addEventListener("load", event=> {
     const id = getParam("id");
     callAPI('${url}/${id}', "GET", {})
     .then( user => {
@@ -10,23 +8,33 @@ window.addEventListener("load", event=> {
         userForm.elements["userName"].value = user.userName
         userForm.elements["password"].value = user.password
     })
-})
+})*/
 
 const userForm = document.querySelector("#user-form")
 
-async function eventoClick(event) {
+async function loadList(event) {
     const list = await fetch(url)
     .then( response => response.json());
     renderizarListadoPost(list)
 }
 
 function renderizarListadoPost(list) {
-    const elementoListado = document.querySelector("#listado")
-    list.forEach(post => {
-        const elemtPost = document.createElement("tr")
-        elemtPost.classList.add("post")
-        elemtPost.textContent = 'id: ${user.id} | name: ${post.name}.'
-        elementoListado.appendChild(elemtPost)
+    const elementoListado = document.querySelector("#list")
+    list.forEach(user => {
+        const elemtTr = document.createElement("tr")
+        const tdId = document.createElement("td")
+        const tdName = document.createElement("td")
+        const tdUserName = document.createElement("td")
+        const tdActions = document.createElement("td")
+        //elemtPost.classList.add("user")
+        tdId.textContent = user.id;
+        tdName.textContent = user.name;
+        tdUserName.textContent = user.user_name;
+        elementoListado.appendChild(elemtTr)
+        elemtTr.appendChild(tdId)
+        elemtTr.appendChild(tdUserName)
+        elemtTr.appendChild(tdName)
+        elemtTr.appendChild(tdActions)
     });
 }
 
@@ -52,7 +60,7 @@ function saveUser(event) {
     
 }
 
-window.addEventListener("load", eventoClick)
+window.addEventListener("load", loadList)
 
 // 3. Agregar evento al formulario
-userForm.addEventListener("submit", saveUser)
+//userForm.addEventListener("submit", saveUser)

@@ -1,3 +1,10 @@
+const url = "http://localhost:3200/users"
+
+function getParam(param) {
+    const params = new URLSearchParams(window.location.search)
+    return params.get(param)
+}
+
 function callAPI(url,method, data) {
     let configuracion = {};
     const header = {
