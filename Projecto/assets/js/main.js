@@ -1,4 +1,10 @@
-const url = "http://localhost:3200/users"
+const url       = "http://localhost:3200/";
+
+function validateSession(){
+    if(userName === ""){
+        window.location.replace(window.location.origin+"/login");
+    }
+}
 
 function getParam(param) {
     const params = new URLSearchParams(window.location.search)

@@ -10,35 +10,37 @@
     })
 })*/
 
-window.addEventListener("load", event=> {
-    validateSession(userName)
-});
-
-const userForm = document.querySelector("#user-form")
+const userForm = document.querySelector("#customer-form")
 
 async function loadList(event) {
-    const list = await fetch(url+"users")
+    const list = await fetch(url+"customers")
     .then( response => response.json());
     renderizarListadoPost(list)
 }
 
 function renderizarListadoPost(list) {
-    const elementoListado = document.querySelector("#list")
-    list.forEach(user => {
+    const elementoList = document.querySelector("#list")
+    list.forEach(customer => {
         const elemtTr = document.createElement("tr")
         const tdId = document.createElement("td")
         const tdName = document.createElement("td")
-        const tdUserName = document.createElement("td")
-        const tdActions = document.createElement("td")
+        const tdEmail = document.createElement("td")
+        const tdAddress = document.createElement("td")
+        const tdCreateAt = document.createElement("td")
+        const tdAction = document.createElement("td")
         //elemtPost.classList.add("user")
-        tdId.textContent = user.id;
-        tdName.textContent = user.name;
-        tdUserName.textContent = user.user_name;
-        elementoListado.appendChild(elemtTr)
+        tdId.textContent = customer.id;
+        tdName.textContent = customer.name;
+        tdEmail.textContent = customer.email;
+        tdCreateAt.textContent = customer.createdAt;
+        tdAddress.textContent = customer.address;
+        elementoList.appendChild(elemtTr)
         elemtTr.appendChild(tdId)
-        elemtTr.appendChild(tdUserName)
         elemtTr.appendChild(tdName)
-        elemtTr.appendChild(tdActions)
+        elemtTr.appendChild(tdEmail)
+        elemtTr.appendChild(tdAddress)
+        elemtTr.appendChild(tdCreateAt)
+        elemtTr.appendChild(tdAction)
     });
 }
 
