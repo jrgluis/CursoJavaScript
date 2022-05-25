@@ -1,4 +1,4 @@
-/*window.addEventListener("load", event=> {
+function loadCustomer(customer) {
     const id = getParam("id");
     callAPI('${url}/${id}', "GET", {})
     .then( user => {
@@ -8,7 +8,7 @@
         userForm.elements["userName"].value = user.userName
         userForm.elements["password"].value = user.password
     })
-})*/
+}
 
 const userForm = document.querySelector("#customer-form")
 
@@ -44,6 +44,27 @@ function renderizarListadoPost(list) {
     });
 }
 
+function createUser(event) {
+    event.preventDefault()
+
+    // 1. obtener datos del formulario
+    const inputs = event.target.elements;
+    const userForm = {
+        id: inputs["id"].value,
+        name: inputs["name"].value,
+        userName: inputs["userName"].value,
+        password: inputs["password"].value,
+    }
+    // 2. enviar datos al API
+    callAPI(url+"users", "POST", userForm)
+    .then(user => {
+        console.log(user)
+        //....
+        loadList();
+        window.addEventListener("load", loadList)
+    })
+}
+
 function saveUser(event) {
     event.preventDefault()
 
@@ -55,15 +76,13 @@ function saveUser(event) {
         userName: inputs["userName"].value,
         password: inputs["password"].value,
     }
-
     // 2. enviar datos al API
     callAPI('${url}/${userForm.id}', "PUT", userForm)
     .then( () => {
         /*if (confirm(`Desea volver al listado de clientes?`)) {
             window.history.back()
         }*/
-    })
-    
+    }) 
 }
 
 window.addEventListener("load", loadList)
