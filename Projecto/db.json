@@ -1,34 +1,58 @@
 {
-	"users": [{
-		"id":1,
-		"name":"Jorge Mejia",
-		"user_name":"jrgluis",
-		"password":"1234"
-	},
-	{
-		"id": 2,
-		"name": "Chatterbridge martinez",
-		"user_name": "msemour4",
-		"password": "1232434"
-	},
-	{
-		"id": 3,
-		"name": "Chatterbridge martinez",
-		"user_name": "msemour4",
-		"password": "12323123"
-	}],
-	"customers": [{
-		"id": 1,
-		"name": "Chatterbridge martinez",
-		"email": "msemour4@printfriendly.com",
-		"address": "1 Washington Circle",
-		"createdAt":"2022/12/01"
-	}],
-	"interactions": [{
-		"id": 1,
-		"note": "note",
-		"createdAt": "2022/12/01",
-		"user": 1,
-		"costumer": 1
-	}]
+  "users": [
+    {
+      "id": 2,
+      "name": "Mauricio Minaya",
+      "user_name": "mminaya",
+      "password": "1234"
+    },
+    {
+      "name": "Juan Perez",
+      "user_name": "jperez",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "Franciscos Pérez",
+      "user_name": "fperez",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "Willy Leonardo",
+      "user_name": "wleonardo",
+      "password": "123443",
+      "id": 5
+    },
+    {
+      "name": "Angela Frica",
+      "user_name": "africa",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Jorge Luis Mejia Duarte",
+      "user_name": "jrgluis",
+      "password": "1234"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Chatterbridge martinez",
+      "email": "msemour4@printfriendly.com",
+      "address": "1 Washington Circle",
+      "createdAt": "2022/12/01"
+    }
+  ],
+  "interactions": [
+    {
+      "id": 1,
+      "note": "note",
+      "createdAt": "2022/12/01",
+      "user": 1,
+      "costumer": 1
+    }
+  ]
 }
