@@ -18,7 +18,7 @@ function saveCustomer(event) {
     // 1. obtener datos del formulario
     const inputs = event.target.elements;
     let method  = "";
-    let catPath = "customers";
+    let catPath = "customers/";
     let customer = {}
     let messagge = "Contraña no debe estar en blanco";
 
@@ -34,7 +34,7 @@ function saveCustomer(event) {
         method = "POST"
     }else{
         method = "PUT"
-        catPath = catPath + "/" +customer.id
+        catPath = catPath + customer.id
     }
     // 2. Guardamos
     callAPI(url+catPath, method, customer)

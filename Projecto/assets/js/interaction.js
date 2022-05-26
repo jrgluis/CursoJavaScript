@@ -18,24 +18,26 @@ function saveInteraction(event) {
     // 1. obtener datos del formulario
     const inputs = event.target.elements;
     let method  = "";
-    let catPath = "interactions";
+    let catPath = "interactions/";
     let interaction = {}
-    let messagge = "Contraña no debe estar en blanco";
+    let messagge = "Nota no debe estar en blanco";
 
     interaction = {
-        id:         inputs["id"].value,
-        name:       inputs["name"].value,
-        email:      inputs["email"].value,
-        address:    inputs["address"].value,
+        id:         inputs["customer"].value,
+        note:       inputs["note"].value,
         createdAt:  today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
+        user:       1,
+        costumer:   1,
+        
     }
 
     if(interaction.id === ""){
         method = "POST"
     }else{
         method = "PUT"
-        catPath = catPath + "/" +interaction.id
+        catPath = catPath + interaction.id
     }
+
     // 2. Guardamos
     callAPI(url+catPath, method, interaction)
     .then(interaction => {
@@ -49,25 +51,42 @@ function deleteInteraction(id) {
 }
 
 async function loadList(event) {
-    const list = await fetch(url+"interactions")
+  const list = await fetch(url + "interactions")
     .then( response => response.json());
-    renderizarListadoPost(list)
+
+    callAPI(url+"customers/", "GET", {})
+    .then( customer => {
+        customer.forEach(element => {
+       var $select = $('#customer');
+       $select.append('<option value='+ element.id +'>' + element.name + '</option>');
+       });   
+
+  })
+  renderizarListadoPost(list)
+  list.forEach(element => {
+    alert(element);
+  });
+  
 }
 
 function renderizarListadoPost(list) {
     const elementoList = document.querySelector("#list")
     list.forEach(interaction => {
         const elemtTr = document.createElement("tr")
-        const tdId = document.createElement("td")
-        const tdCustomer = document.createElement("td")
-        const tdNote = document.createElement("td")
-        const tdCreateAt = document.createElement("td")
-        const tdAction = document.createElement("td")
+
+        const tdId          = document.createElement("td")
+        const tdNote        = document.createElement("td")
+        const tdCreateAt    = document.createElement("td")
+        const tdUser        = document.createElement("td")
+        const tdCustomer    = document.createElement("td")
+
+        const tdAction      = document.createElement("td")
         
         const hrefDelete    = document.createElement("a");
         const hrefEdit      = document.createElement("a");
         const iActionDelete = document.createElement("i");
         const iActionEdit   = document.createElement("i");
+
         hrefDelete.className= "btn btn-default btn-circle btn-sm btn-outline-danger";
         hrefEdit.className  = "btn btn-default btn-circle btn-sm btn-outline-primary";
         hrefEdit.setAttribute("onclick", "loadinteraction("+interaction.id+")");
@@ -83,15 +102,22 @@ function renderizarListadoPost(list) {
         hrefDelete.appendChild(iActionDelete);
         hrefEdit.appendChild(iActionEdit);
         //elemtPost.classList.add("interaction")
-        tdId.textContent = interaction.id;
-        tdName.textContent = interaction.note;
-        tdCreateAt.textContent = interaction.createdAt;
-        tdAddress.textContent = interaction.address;
+
+        tdId.textContent        = interaction.id;
+        tdNote.textContent      = interaction.note;
+        tdCreateAt.textContent  = interaction.createdAt;
+        tdUser.textContent      = interaction.user
+        tdCustomer.textContent  = interaction.customer;
+
         elementoList.appendChild(elemtTr)
+
         elemtTr.appendChild(tdId)
-        elemtTr.appendChild(tdCustomer)
         elemtTr.appendChild(tdNote)
         elemtTr.appendChild(tdCreateAt)
+        elemtTr.appendChild(tdUser)
+        elemtTr.appendChild(tdCustomer)
+        
+        
         elemtTr.appendChild(tdAction)
         tdAction.appendChild(hrefDelete);
         tdAction.appendChild(hrefEdit);

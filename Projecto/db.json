@@ -1,39 +1,15 @@
 {
   "users": [
     {
-      "id": 2,
-      "name": "Mauricio Minaya",
-      "user_name": "mminaya",
-      "password": ""
-    },
-    {
-      "id": 3,
-      "name": "Juan Perez",
-      "user_name": "jperez",
-      "password": "1234"
-    },
-    {
-      "id": 4,
-      "name": "Franciscos L. Pérez",
-      "user_name": "fperez",
-      "password": "123456"
-    },
-    {
-      "name": "Willy Leonardo",
-      "user_name": "wleonardo",
-      "password": "123443",
-      "id": 5
-    },
-    {
-      "name": "Angela Frica",
-      "user_name": "africa",
-      "password": "123456",
-      "id": 6
-    },
-    {
       "id": 7,
       "name": "Jorge Luis Mejia Duarte",
       "user_name": "jrgluis",
+      "password": "1234"
+    },
+    {
+      "id": 8,
+      "name": "Enfry Ciprian",
+      "user_name": "eciprian",
       "password": "1234"
     }
   ],
@@ -56,10 +32,17 @@
   "interactions": [
     {
       "id": 1,
-      "note": "note",
-      "createdAt": "2022/12/01",
+      "note": "ESTOY PROBANDO QUE ESTO GUARDA BIEN",
+      "createdAt": "2022-5-26",
       "user": 1,
       "costumer": 1
+    },
+    {
+      "id": 2,
+      "note": "c vx",
+      "createdAt": "2022-5-26",
+      "user": 1,
+      "customer": 1
     }
   ]
 }
