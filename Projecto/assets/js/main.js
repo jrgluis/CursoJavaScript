@@ -1,4 +1,4 @@
-const url       = "http://localhost:3200/";
+const url = "http://localhost:3200/";
 
 function validateSession(){
     if(userName === ""){

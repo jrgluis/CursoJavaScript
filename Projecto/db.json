@@ -4,19 +4,19 @@
       "id": 2,
       "name": "Mauricio Minaya",
       "user_name": "mminaya",
+      "password": ""
+    },
+    {
+      "id": 3,
+      "name": "Juan Perez",
+      "user_name": "jperez",
       "password": "1234"
     },
     {
-      "name": "Juan Perez",
-      "user_name": "jperez",
-      "password": "12345",
-      "id": 3
-    },
-    {
-      "name": "Franciscos Pérez",
+      "id": 4,
+      "name": "Franciscos L. Pérez",
       "user_name": "fperez",
-      "password": "123456",
-      "id": 4
+      "password": "123456"
     },
     {
       "name": "Willy Leonardo",
@@ -37,15 +37,7 @@
       "password": "1234"
     }
   ],
-  "customers": [
-    {
-      "id": 1,
-      "name": "Chatterbridge martinez",
-      "email": "msemour4@printfriendly.com",
-      "address": "1 Washington Circle",
-      "createdAt": "2022/12/01"
-    }
-  ],
+  "customers": [],
   "interactions": [
     {
       "id": 1,
