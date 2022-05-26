@@ -37,7 +37,22 @@
       "password": "1234"
     }
   ],
-  "customers": [],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Jorge Luis Mejia",
+      "email": "jorge.mejia@gmail.com",
+      "address": "Av. Hípica, Santo Domingo Este",
+      "createdAt": "2022-5-26"
+    },
+    {
+      "id": 2,
+      "name": "Mauricio Minaya",
+      "email": "mauricio.minaya@hotmail.com",
+      "address": "calle 3ra, al lado de la otra calle.",
+      "createdAt": "2022-5-26"
+    }
+  ],
   "interactions": [
     {
       "id": 1,
