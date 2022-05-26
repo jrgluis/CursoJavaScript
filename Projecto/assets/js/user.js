@@ -3,12 +3,12 @@ const userForm = document.querySelector("#user-form")
 function loadUser(id) {
     //const id = getParam("id");
     callAPI(url+"users/"+id, "GET", {})
-    .then( user => {
-        userForm.elements["id"].value = user.id
-        userForm.elements["name"].value = user.name
-        userForm.elements["userName"].value = user.user_name
-        //userForm.elements["password"].value = user.password
-    })
+        .then( user => {
+            userForm.elements["id"].value = user.id
+            userForm.elements["name"].value = user.name
+            userForm.elements["userName"].value = user.user_name
+            userForm.elements["password"].value = user.password
+        })
 }
 
 function saveUser(event) {
@@ -18,8 +18,10 @@ function saveUser(event) {
     const inputs = event.target.elements;
     let method  = "";
     let catPath = "users";
+    let user = {}
+    let messagge = "Contraña no debe estar en blanco";
 
-    const user = {
+    user = {
         id:         inputs["id"].value,
         name:       inputs["name"].value,
         user_name:  inputs["userName"].value,
@@ -37,7 +39,6 @@ function saveUser(event) {
     .then(user => {
         window.location.reload();
     })
-    
 }
 
 function deleteUser(id) {
@@ -57,6 +58,7 @@ async function loadList(event) {
 
 function renderizarListadoPost(list) {
     const elementoListado = document.querySelector("#list")
+
     list.forEach(user => {
         const elemtTr       = document.createElement("tr")
         const tdId          = document.createElement("td")
