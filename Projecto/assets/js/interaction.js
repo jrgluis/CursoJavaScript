@@ -23,11 +23,11 @@ function saveInteraction(event) {
     let messagge = "Nota no debe estar en blanco";
 
     interaction = {
-        id:         inputs["customer"].value,
+        id:         inputs["id"].value,
         note:       inputs["note"].value,
         createdAt:  today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
-        user:       1,
-        costumer:   1,
+        user:       inputs["userId"].value,
+        costumer:   inputs["customer"].value,
         
     }
 
@@ -57,16 +57,11 @@ async function loadList(event) {
     callAPI(url+"customers/", "GET", {})
     .then( customer => {
         customer.forEach(element => {
-       var $select = $('#customer');
-       $select.append('<option value='+ element.id +'>' + element.name + '</option>');
-       });   
-
+            var $select = $('#customer');
+            $select.append('<option value='+ element.id +'>' + element.name + '</option>');
+        });
   })
   renderizarListadoPost(list)
-  list.forEach(element => {
-    alert(element);
-  });
-  
 }
 
 function renderizarListadoPost(list) {
