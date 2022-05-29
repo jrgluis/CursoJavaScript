@@ -24,7 +24,7 @@
     <script src="https://kit.fontawesome.com/6bf73e456d.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="validateSession()">
     <div class="container-scroller">
         <section class="fabrx-sidebar">
             <div class="row no-gutters">
@@ -50,8 +50,7 @@
                                 <a href="#0" class="fabrx-avatar fabrx-status dnd md">
                                     <img src="images/avatars/avatar-1.png" alt="Avatar">
                                 </a>
-                                <div class="pl-2">
-                                    <strong class="d-block text-primary font-size-14 font-weight-medium">Hola, usuario</strong>
+                                <div id="registrationUserName" class="pl-2">
                                 </div>
                             </div>
                         </div>
@@ -82,14 +81,10 @@
                         </div>
                         <div class="fabrx-aside-body fabrx-scroll accordion1">
                             <div class="fabrx-aside-footer">
-                                <a href="/logout" class="font-size-12">
+                                <a href="#" onclick="logout()" class="font-size-12">
                                     Sign out
                                 </a>
                             </div>
-                        </div>
-                        <div class="fabrx-aside-footer">
-                            <img src="images/avatars/avatar-1.png" alt="Avatar">
-                            <a href="#0" style="font-size: 12px; color: gray;">v1.0.0</a>
                         </div>
                     </aside>
                 </div>

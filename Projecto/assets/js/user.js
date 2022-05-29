@@ -46,10 +46,6 @@ function deleteUser(id) {
     window.location.reload();
 }
 
-window.addEventListener("load", event=> {
-    validateSession(userName)
-});
-
 async function loadList(event) {
     const list = await fetch(url+"users")
     .then( response => response.json());

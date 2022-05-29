@@ -1,9 +1,20 @@
 const url = "http://localhost:3200/";
 
 function validateSession(){
-    if(userName === ""){
+    if(localStorage.getItem("id") === null){
         window.location.replace(window.location.origin+"/login");
+    }else{
+        let userId = localStorage.getItem("id");
+        let userName = localStorage.getItem("userName");
+        var $userRegistration = $('#registrationUserName');
+        $userRegistration.append("<strong class='d-block text-primary font-size-14 font-weight-medium'>Hola, "+userName+"</strong>");
     }
+}
+
+function logout(){
+    localStorage.removeItem("id");
+    localStorage.removeItem("userName");
+    window.location.reload();
 }
 
 function getParam(param) {
