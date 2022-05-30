@@ -33,16 +33,16 @@
     {
       "id": 1,
       "note": "ESTOY PROBANDO QUE ESTO GUARDA BIEN",
-      "createdAt": "2022-5-26",
-      "user": 1,
-      "costumer": 1
+      "createdAt": "2022-5-29",
+      "user": 7,
+      "costumer": "2"
     },
     {
       "id": 2,
-      "note": "c vx",
-      "createdAt": "2022-5-26",
-      "user": 1,
-      "customer": 1
+      "note": "hola",
+      "createdAt": "2022-5-29",
+      "user": 7,
+      "costumer": "2"
     }
   ]
 }

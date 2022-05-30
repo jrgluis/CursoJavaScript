@@ -4,10 +4,10 @@ function loadInteraction(id) {
     
     callAPI(url+"interactions/"+id, "GET", {})
         .then( interaction => {
-            interactionForm.elements["id"].value       = interaction.id
-            interactionForm.elements["name"].value     = interaction.name
-            interactionForm.elements["email"].value    = interaction.email
-            interactionForm.elements["address"].value  = interaction.address
+            interactionForm.elements["id"].value        = interaction.id
+            interactionForm.elements["note"].value      = interaction.note
+            interactionForm.elements["userId"].value    = interaction.user
+            interactionForm.elements["customer"].value  = interaction.customer
         })
 }
 
@@ -26,8 +26,8 @@ function saveInteraction(event) {
         id:         inputs["id"].value,
         note:       inputs["note"].value,
         createdAt:  today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(),
-        user:       inputs["userId"].value,
-        costumer:   inputs["customer"].value,
+        user:       parseInt(localStorage.getItem("id")),
+        costumer:   parseInt(interactionForm.elements["customer"].value),
         
     }
 
@@ -84,8 +84,8 @@ function renderizarListadoPost(list) {
 
         hrefDelete.className= "btn btn-default btn-circle btn-sm btn-outline-danger";
         hrefEdit.className  = "btn btn-default btn-circle btn-sm btn-outline-primary";
-        hrefEdit.setAttribute("onclick", "loadinteraction("+interaction.id+")");
-        hrefDelete.setAttribute("onclick", "deleteinteraction("+interaction.id+")");
+        hrefEdit.setAttribute("onclick", "loadInteraction("+interaction.id+")");
+        hrefDelete.setAttribute("onclick", "deleteInteraction("+interaction.id+")");
 
         iActionDelete.classList.add("fas");
         iActionDelete.classList.add("fa-trash")
