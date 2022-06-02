@@ -102,7 +102,7 @@ function renderizarListadoPost(list) {
         tdNote.textContent      = interaction.note;
         tdCreateAt.textContent  = interaction.createdAt;
         tdUser.textContent      = interaction.user
-        tdCustomer.textContent  = interaction.customer;
+        tdCustomer.textContent  = interaction.customer;sfsd
 
         elementoList.appendChild(elemtTr)
 
