@@ -1,0 +1,32 @@
+<script>
+
+const myNumbers = [1,2,3,4,5,6,7];
+const myFunction = arr =>{
+    //map() crea un array a partir de otro filter, filtra segun la condicion...
+    return arr.map(x => x + 3).filter(x => x < 7);
+}
+
+let animals = ["kangaroo","bear","coyote"];
+//let key = element => element[0]; nada
+let key = (element, index) => element[index];
+//let key = (element, index) => element[--index]; nada
+//let key = element, index => element[index]; error
+
+if(animals.map(key).join("") === "key"){
+    console.log("wild animals - ", animals.map(key).join(""), animals);
+}
+
+console.log(myFunction(myNumbers));
+
+var arr = ["jorge","luis","mejia","duarte"];
+
+var posicion = arr.indexOf("jorge");//obtengo el indice de un elmento
+console.log(posicion);
+
+var elementosEliminados = arr.splice(posicion, 1)//elimina uno o varios elmementos de array desde una determinada posicion
+console.log(arr);
+
+arr.forEach(function(element, index, array){
+    console.log(element, index);
+});
+</script>

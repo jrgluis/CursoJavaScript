@@ -51,20 +51,12 @@
   ],
   "interactions": [
     {
-      "id": 1,
-      "note": "Cliente necesita asesoría en temas de seguridad\n--\nReunion pautada para el viernes 03/06/2022 con los Sres:\nPedro Almodovar\nCheche Abreu\nPaquito Guzman\nJohn Travolta\n\nSe decidió hacer esta reunion via zoom",
-      "createdAt": "2022-5-31",
-      "user": 9,
-      "customer": 2,
-      "customer_representative": "Mauricio Minaya"
-    },
-    {
       "id": 2,
       "note": "El instituto tecnológico de las americas ITLA requiere nuevo personal con conocimientos de Redes y cableado estructurado",
-      "createdAt": "2022-5-31",
-      "user": 9,
-      "customer": 2,
-      "customer_representative": "Mauricio Minaya"
+      "createdAt": "2022-6-2",
+      "user": 7,
+      "customer": 4,
+      "customer_representative": "Peter Pan"
     },
     {
       "id": 4,
